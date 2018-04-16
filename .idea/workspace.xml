@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c1c7148-d161-4cc6-b79c-5ffe94ea3960" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/NewsController.php" afterPath="$PROJECT_DIR$/backend/controllers/NewsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/cat/_form.php" afterPath="$PROJECT_DIR$/backend/views/cat/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/cat/_search.php" afterPath="$PROJECT_DIR$/backend/views/cat/_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/cat/_table.php" afterPath="$PROJECT_DIR$/backend/views/cat/_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/cat/create.php" afterPath="$PROJECT_DIR$/backend/views/cat/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/cat/index.php" afterPath="$PROJECT_DIR$/backend/views/cat/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/cat/update.php" afterPath="$PROJECT_DIR$/backend/views/cat/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/cat/view.php" afterPath="$PROJECT_DIR$/backend/views/cat/view.php" />
-    </list>
+    <list default="true" id="8c1c7148-d161-4cc6-b79c-5ffe94ea3960" name="Default" comment="" />
     <ignored path="newsyii.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -399,12 +388,12 @@
       <workItem from="1503987042481" duration="14442000" />
       <workItem from="1504007003453" duration="90000" />
       <workItem from="1523551735436" duration="1509000" />
-      <workItem from="1523857257818" duration="4550000" />
+      <workItem from="1523857257818" duration="5170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308541000" />
+    <option name="totallyTimeSpent" value="309161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
