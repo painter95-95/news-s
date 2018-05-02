@@ -82,7 +82,7 @@ class HttpBasicAuth extends AuthMethod
     /**
      * @inheritdoc
      */
-    public function authenticate($user, $request, $response)
+    /*public function authenticate($user, $request, $response)
     {
         $username = $request->getAuthUser();
         $password = $request->getAuthPassword();
@@ -106,7 +106,7 @@ class HttpBasicAuth extends AuthMethod
         }
 
         return null;
-    }
+    }*/
 
     /**
      * @inheritdoc

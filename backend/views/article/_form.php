@@ -44,7 +44,6 @@ use dosamigos\ckeditor\CKEditor;
                                 <li role="presentation" class="active"><a href="#russian" aria-controls="russian" role="tab" data-toggle="tab">Русский</a></li>
                                 <li role="presentation"><a href="#uzbek" aria-controls="uzbek" role="tab" data-toggle="tab">Ўзбекча лотин</a></li>
                                 <li role="presentation"><a href="#kiril" aria-controls="kiril" role="tab" data-toggle="tab">Ўзбекча кирил</a></li>
-                                <li role="presentation"><a href="#korean" aria-controls="korean" role="tab" data-toggle="tab">Korean</a></li>
                                 <li role="presentation"><a href="#english" aria-controls="english" role="tab" data-toggle="tab">English</a></li>
                             </ul>
                             <div class="tab-content bg-white p-15">
@@ -71,16 +70,6 @@ use dosamigos\ckeditor\CKEditor;
                                     <?= $form->field($model, 'title_uc')->textInput(['maxlength' => true]) ?>
                                     <?= $form->field($model, 'mini_desc_uc')->textInput(['maxlength' => true]) ?>
                                     <?= $form->field($model, 'desc_uc')->widget(CKEditor::className(), [
-                                        'options' => ['rows' => 6],
-                                        'preset' => 'basic'
-                                    ]) ?>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="korean">
-                                    <?= $form->field($model, 'title_cor')->textInput(['maxlength' => true]) ?>
-
-                                    <?= $form->field($model, 'mini_desc_cor')->textInput(['maxlength' => true]) ?>
-
-                                    <?= $form->field($model, 'desc_cor')->widget(CKEditor::className(), [
                                         'options' => ['rows' => 6],
                                         'preset' => 'basic'
                                     ]) ?>

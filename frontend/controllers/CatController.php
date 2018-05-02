@@ -43,9 +43,9 @@ class CatController extends Controller
         ]);
     }
 
-    public function actionView($token)
+    public function actionView()
     {
-        $news = Cat::find()->where(['token'=>$token])->one();
+        $news = Cat::find()->all();
         return $this->render('view', [
             'news' => $news,
         ]);

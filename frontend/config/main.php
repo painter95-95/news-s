@@ -56,6 +56,8 @@ return [
             'showScriptName' => false,
 
             'rules' => [
+                '<action:\w+>/<id:\d+>' => 'site/<action>',
+                'search' => 'news/search',
             ],
         ],
     ],

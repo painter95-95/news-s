@@ -42,7 +42,6 @@ use yii\widgets\ActiveForm;
                             <li role="presentation" class="active"><a href="#russian" aria-controls="russian" role="tab" data-toggle="tab">Русский</a></li>
                             <li role="presentation"><a href="#uzbek" aria-controls="uzbek" role="tab" data-toggle="tab">Ўзбекча лотин</a></li>
                             <li role="presentation"><a href="#kiril" aria-controls="kiril" role="tab" data-toggle="tab">Ўзбекча кирил</a></li>
-                            <li role="presentation"><a href="#korean" aria-controls="korean" role="tab" data-toggle="tab">Korean</a></li>
                             <li role="presentation"><a href="#english" aria-controls="english" role="tab" data-toggle="tab">English</a></li>
                         </ul>
                         <div class="tab-content bg-white p-15">
@@ -57,12 +56,6 @@ use yii\widgets\ActiveForm;
                             <div role="tabpanel" class="tab-pane" id="kiril">
                                 <?= $form->field($model, 'name_uc')->textInput(['maxlength' => true]) ?>
                                 <?= $form->field($model, 'title_uc')->textInput(['maxlength' => true]) ?>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="korean">
-                                <?= $form->field($model, 'name_cor')->textInput(['maxlength' => true]) ?>
-
-                                <?= $form->field($model, 'title_cor')->textInput(['maxlength' => true]) ?>
-
                             </div>
                             <div role="tabpanel" class="tab-pane" id="english">
                                 <?= $form->field($model, 'name_en')->textInput(['maxlength' => true]) ?>

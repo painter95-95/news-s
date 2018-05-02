@@ -11,10 +11,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container">
         <div class="row">
             <div class="col-md-7 col-sm-9">
-                <ul class="bcrumbs">
-                    <li><a href="<?= Url::to('@web/')?>"><?= Yii::t('app', 'Home');?></a></li>
-                    <li><?= Yii::t('app', 'News');?></li>
-                </ul>
                 <br>
                 <h2><?= Yii::t('app', 'News');?></h2>
             </div>
@@ -24,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <!-- // PAGE HEADER -->
 
 <!-- CATEGORY -->
-<div class="container padding-bottom-30">
+<div class="container padding-bottom-30" style="background: #fff; padding: 15px 10px">
     <div class="row">
         <div class="col-md-8 col-sm-7 dual-posts padding-bottom-30">
             <? foreach ($models as $model): ?>
@@ -32,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="layout_3--item">
                         <div class="col-md-5 col-sm-6">
                             <div class="thumb">
-                                <a href="<?=Url::toRoute(['news/news', 'id' => $model->id])?>">
+                                <a href="<?=Url::toRoute(['news/view', 'id' => $model->id])?>">
                                     <img src="<?=Url::to('@web/images/news/list/'.$model->logo)?>" class="img-responsive" alt="">
                                 </a>
                             </div>

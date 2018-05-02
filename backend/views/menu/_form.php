@@ -59,10 +59,6 @@ use yii\widgets\ActiveForm;
                                 <?= $form->field($model, 'name_uc')->textInput(['maxlength' => true]) ?>
                                 <?= $form->field($model, 'title_uc')->textInput(['maxlength' => true]) ?>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="korean">
-                                <?= $form->field($model, 'name_cor')->textInput(['maxlength' => true]) ?>
-                                <?= $form->field($model, 'title_cor')->textInput(['maxlength' => true]) ?>
-                            </div>
                             <div role="tabpanel" class="tab-pane" id="english">
                                 <?= $form->field($model, 'name_en')->textInput(['maxlength' => true]) ?>
                                 <?= $form->field($model, 'title_en')->textInput(['maxlength' => true]) ?>

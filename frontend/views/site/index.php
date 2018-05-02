@@ -2,17 +2,16 @@
 use yii\helpers\Url;
 
 ?>
-
-<div class="container margin-top-30">
+<div class="container margin-top-10" style="background: #fff;box-shadow: 0 1px 15px rgba(0,0,0,.14)">
     <div class="row">
         <div class="col-md-8">
-            <div class="col-md-4 col-sm-4 hidden-xs">
+            <div class="col-md-4 col-sm-4 hidden-xs" style="background: linear-gradient(0deg,rgba(0,0,0,.3),transparent 46%),linear-gradient(90deg,#d61726 0,#d61726 45px,#122d68 0,#122d68); padding: 10px 4px">
                 <div class="col-md-12 col-sm-12">
                     <div class="side-widget margin-bottom-10">
                         <h3 class="heading-1"><span><?=Yii::t('app', 'Categories')?></span></h3>
                         <ul class="categories">
                             <? foreach ($cat as $c): ?>
-                                <li><a href="<?= Url::toRoute(['cat/view', 'token' =>$c->token])?>"><?=$c->langName();?></a> <span><?= $c->catItems($c->id);?></span></li>
+                                <li><a href="<?= Url::toRoute(['cat/view', 'id' =>$c->id])?>"><?=$c->langName();?></a> <span><?= $c->catItems($c->id);?></span></li>
                             <? endforeach; ?>
                             <div class="text-center"><a href="<?= Url::toRoute(['cat/index']);?>"><?= Yii::t('app', 'More');?> <i class="fa fa-angle-double-right"></i></a></div>
                         </ul>
@@ -33,12 +32,13 @@ use yii\helpers\Url;
                     <div class="layout_1 margin-bottom-30">
                         <div class="row">
                             <div class="col-md-12">
+                                <br>
                                 <h3 class="heading-1"><span><?=Yii::t('app', 'Top News')?></span></h3>
                                 <div class="post-carousel-wrap">
                                     <div class="post-carousel">
                                         <? foreach ($news as $val):?>
                                             <div class="layout_1--item">
-                                                <a href="<?=Url::toRoute(['site/news', 'id'=>$val->token]);?>">
+                                                <a href="<?=Url::toRoute(['news/view', 'id'=>$val->id]);?>">
                                                     <span class="badge text-uppercase badge-overlay badge-lifestyle"><?=$val->cat->langName();?></span>
                                                     <div class="overlay"></div>
                                                     <img src="<?= Url::to('@web/images/news/slide/'.$val->logo)?>" class="img-responsive" alt=""/>
@@ -65,7 +65,7 @@ use yii\helpers\Url;
                                 <div class="col-md-6 col-sm-6">
                                     <div class="layout_2--item">
                                         <div class="thumb">
-                                            <a href="<?=Url::toRoute(['site/news', 'id'=>$n_item->token])?>"><img src="<?=Url::to('@web/images/news/list/'.$n_item->logo);?>" class="img-responsive" alt=""/></a>
+                                            <a href="<?=Url::toRoute(['news/view', 'id'=>$n_item->id])?>"><img src="<?=Url::to('@web/images/news/list/'.$n_item->logo);?>" class="img-responsive" alt=""/></a>
                                         </div>
                                         <span class="cat"><?=$n_item->cat->langName(); ?></span>
                                         <h4><a href="<?=Url::toRoute(['site/news', 'id'=>$n_item->token])?>"><?=$n_item->langTitle(); ?></a></h4>
@@ -74,7 +74,7 @@ use yii\helpers\Url;
                                 </div>
                             <? endforeach; ?>
                             <div class="text-center">
-                                <a href="<?= Url::toRoute(['site/newsall']);?>">
+                                <a href="<?= Url::toRoute(['news/index']);?>">
                                     <?= Yii::t('app', 'More');?> <i class="fa fa-angle-double-right"></i></a>
                             </div>
                             <hr>
@@ -89,10 +89,10 @@ use yii\helpers\Url;
                             <h3 class="heading-1"><span><?=$art_val->cat->langName();?></span></h3>
                             <div class="layout_3--item">
                                 <div class="thumb">
-                                    <a href="<?=Url::toRoute(['site/news', 'id'=>$art_val->token]);?>"><img src="<?=Url::to('@web/images/news/list/'.$art_val->logo)?>" class="img-responsive" alt=""/></a>
+                                    <a href="<?=Url::toRoute(['news/view', 'id'=>$art_val->id]);?>"><img src="<?=Url::to('@web/images/news/list/'.$art_val->logo)?>" class="img-responsive" alt=""/></a>
                                 </div>
                                 <span class="cat"><?=$art_val->cat->langName();?></span>
-                                <h4><a href="<?=Url::toRoute(['site/news', 'id'=>$art_val->token]);?>"><?=$art_val->langtitle();?></a></h4>
+                                <h4><a href="<?=Url::toRoute(['site/news', 'id'=>$art_val->id]);?>"><?=$art_val->langtitle();?></a></h4>
                                 <p>
                                     <?=$art_val->langminidesc();?>
                                 </p>
@@ -102,8 +102,9 @@ use yii\helpers\Url;
                         </div>
                     <? endforeach; ?>
                     <div class="text-center padding-25">
-                        <a href="" class="">
-                            <?= Yii::t('app', 'More');?> <i class="fa fa-angle-double-right"></i></a>
+                        <a href="<?= Url::toRoute(['news/index']);?>" >
+                            <?= Yii::t('app', 'More');?> <i class="fa fa-angle-double-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -114,7 +115,7 @@ use yii\helpers\Url;
     </div>
 </div>
 
-<div class="video-carousel-wrap bg-dark">
+<div class="video-carousel-wrap bg-dark" style="background: linear-gradient(0deg,rgba(0,0,0,.3),transparent 46%),linear-gradient(90deg,#d61726 0,#d61726 45px,#122d68 0,#122d68); color:#000; box-shadow: 0 1px 15px rgba(0,0,0,.14)">
     <div class="container">
         <h5><span><?= Yii::t('app', 'Video')?></span> <a href="#"><?= Yii::t('app', 'View All')?> <i class="fa fa-angle-right"></i></a></h5>
         <div class="clearfix"></div>
@@ -166,7 +167,7 @@ use yii\helpers\Url;
     </div>
 </div>
 
-<div class="container more-posts padding-top-40 padding-bottom-60">
+<div class="container more-posts padding-top-40 padding-bottom-60" style="padding: 5px; box-shadow: 0 1px 15px rgba(0,0,0,.14); background: #fff">
     <h3 class="heading-1"><span><?=Yii::t('app', 'You might also like');?></span></h3>
     <div class="row">
         <? foreach ($facts as $fact):?>

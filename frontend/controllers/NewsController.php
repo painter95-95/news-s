@@ -32,9 +32,9 @@ class NewsController extends Controller
         ];
     }
 
-    public function actionIndex($id)
+    public function actionIndex()
     {
-        $news = News::find()->where(['type_cat'=>$id])->orderBy(['create_at' => SORT_DESC]);
+        $news = News::find()->/*where(['type_cat'=>$id])->*/orderBy(['create_at' => SORT_DESC]);
         $countNews = clone $news;
         $pages = new Pagination(['totalCount'=>$countNews->count(), 'pageSize'=> 7]);
         $models = $news->offset($pages->offset)->limit($pages->limit)->all();
@@ -43,13 +43,13 @@ class NewsController extends Controller
 
     public function actionSearch(){
         $q = Yii::$app->request->get('q');
-        $news = News::find()->where(['like', 'title_'.Yii::$app->language, $q]);
+        $news = News::find()->where(['like', 'name', $q]);
         $countNews = clone $news;
         $pages = new Pagination(['totalCount'=>$countNews->count(), 'pageSize'=> 9]);
         $models = $news->offset($pages->offset)->limit($pages->limit)->all();
-        return $this->render('index', compact('models', 'pages', 'q'));
-    }
 
+        return $this->render('_search', compact('models', 'pages', 'q'));
+    }
 
     protected function findModel($id)
     {
@@ -58,5 +58,9 @@ class NewsController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+    public function actionView($id)
+    {
+        return $this->render('view', ['model'=> $this->findModel($id)]);
     }
 }

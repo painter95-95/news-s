@@ -89,10 +89,9 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-
         $reklama = new Reklama();
         $model = new News();
-        $cat = Cat::find()->select('id, token, name_'.Yii::$app->language)->limit('16')->all();
+        $cat = Cat::find()->select('id, name_'.Yii::$app->language)->limit('16')->all();
         $news = $model->find()->where(['type_cat'=>1])->limit('8')->orderBy(['create_at'=>SORT_DESC])->all();
         $articles = $model->find()->where(['type_cat'=>2])->limit('4')->orderBy(['create_at'=>SORT_DESC])->all();
         $videos = Videos::find()->limit('4')->orderBy(['create_at'=>SORT_DESC])->all();
@@ -181,7 +180,6 @@ class SiteController extends Controller
     public function actionNews($id)
     {
         $news = new News();
-        $news_id = $news->find()->where(['token'=> $id])->one();
         //view
         $session = Yii::$app->session;
         if ( !$session->isActive) { $session->open(); }
@@ -259,6 +257,13 @@ class SiteController extends Controller
 
         return $this->render('resetPassword', [
             'model' => $model,
+        ]);
+    }
+
+    public function actionReklama() {
+        $reklama = Reklama::find()->all();
+        return $this->render('reklama1', [
+            'reklama'=> $reklama
         ]);
     }
 }

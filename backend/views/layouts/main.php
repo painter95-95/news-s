@@ -169,14 +169,12 @@ AppAsset::register($this);
                         <ul>
                             <li> <a href="<?= Url::toRoute(['cat/index'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Список</b> </a> </li>
                             <li> <a href="<?= Url::toRoute(['cat/create'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Добавить</b> </a> </li>
-                            <li> <a href="<?= Url::toRoute(['cat/active'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Активировать</b> </a> </li>
                         </ul>
                     </li>
                     <li> <a href="javascript:void(0);"> <i class="fa fa-rss"></i> Новости <span class="plus"><i class="fa fa-plus"></i></span></a>
                         <ul>
                             <li> <a href="<?= Url::toRoute(['news/index'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Список новости</b> </a> </li>
                             <li> <a href="<?= Url::toRoute(['news/create'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Добавить новости</b> </a> </li>
-                            <li> <a href="<?= Url::toRoute(['news/active'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Активировать</b> </a> </li>
                         </ul>
                     </li>
 
@@ -184,7 +182,6 @@ AppAsset::register($this);
                         <ul>
                             <li> <a href="<?= Url::toRoute(['pages/index'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Список</b> </a> </li>
                             <li> <a href="<?= Url::toRoute(['pages/create'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Добавить</b> </a> </li>
-                            <li> <a href="<?= Url::toRoute(['pages/active'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Активировать</b> </a> </li>
                         </ul>
                     </li>
 
@@ -192,7 +189,6 @@ AppAsset::register($this);
                         <ul>
                             <li> <a href="<?= Url::toRoute(['comments/index'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Список</b> </a> </li>
                             <li> <a href="<?= Url::toRoute(['comments/create'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Оставить коммент</b> </a> </li>
-                            <li> <a href="<?= Url::toRoute(['comments/active'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Активировать</b> </a> </li>
                         </ul>
                     </li>
 
@@ -200,7 +196,6 @@ AppAsset::register($this);
                         <ul>
                             <li> <a href="<?= Url::toRoute(['subscribe/index'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Список подписшики</b> </a> </li>
                             <li> <a href="<?= Url::toRoute(['subscribe/create'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Отправить сообщение</b> </a> </li>
-                            <li> <a href="<?= Url::toRoute(['subscribe/active'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Активировать</b> </a> </li>
                         </ul>
                     </li>
                     <li> <a href="javascript:void(0);"> <i class="fa fa-facebook"></i> Социалный сети<span class="plus"><i class="fa fa-plus"></i></span></a>
@@ -223,7 +218,6 @@ AppAsset::register($this);
                         <ul>
                             <li> <a href="<?= Url::toRoute(['reklama/index'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Список</b> </a> </li>
                             <li> <a href="<?= Url::toRoute(['reklama/create'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Добавить</b> </a> </li>
-                            <li> <a href="<?= Url::toRoute(['reklama/active'])?>"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Активировать</b> </a> </li>
                         </ul>
                     </li>
                     <li> <a href="javascript:void(0);"> <i class="fa fa-flag"></i> Языки <span class="plus"><i class="fa fa-plus"></i></span></a>

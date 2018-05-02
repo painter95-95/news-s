@@ -77,7 +77,6 @@ class CatController extends Controller
             $filename = rand(1000000000, 9999999999);
             $num = rand(0, 9999);
             $model->type_post = 12;
-            $model->token = substr(hash("sha256",$num), 0, 8);
             $model->logo = UploadedFile::getInstance($model,'logo');
             if (!empty($model->logo)){
                 $model->logo->saveAs( Yii::getAlias('@newsfolder/original/').$filename.'.'.$model->logo->extension );

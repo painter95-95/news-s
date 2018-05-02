@@ -42,7 +42,7 @@ class NewsController extends Controller
      */
     public function actionIndex()
     {
-       
+
         $searchModel = new NewsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         return $this->render('index', [
@@ -74,7 +74,6 @@ class NewsController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $filename = rand(1000000000, 9999999999);
             $num = rand(0, 9999);
-            $model->token = substr(hash("sha256",$num), 0, 8);
             $model->create_at = date('Y-m-d H:i:s');
             $model->author = Yii::$app->user->identity->id;
             $model->logo = UploadedFile::getInstance($model,'logo');
@@ -103,9 +102,10 @@ class NewsController extends Controller
         }
     }
 
-    
+
     public function actionUpdate($id)
     {
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
@@ -174,6 +174,7 @@ class NewsController extends Controller
      * @return News the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
+
     protected function findModel($id)
     {
         if (($model = News::findOne($id)) !== null) {

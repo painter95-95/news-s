@@ -11,10 +11,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">
-                <ul class="bcrumbs">
-                    <li><a href="<?= Url::to('@web/');?>"><?= Yii::t('app', 'Home');?></a></li>
-                    <li><?= Yii::t('app', 'Categories');?></li>
-                </ul>
                 <br>
                 <h2><?= $news->langName(); ?></h2>
             </div>

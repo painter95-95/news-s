@@ -1,35 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: User
- * Date: 05.11.2017
- * Time: 9:55
- */
+
 use \yii\helpers\Url;
 ?>
 
-<!-- PAGE HEADER -->
-<div class="page_header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="bcrumbs">
-                    <li><a href="#">Home</a></li>
-                    <li>Gallery</li>
-                </ul>
-                <br>
-                <h2>News in Photo</h2>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- // PAGE HEADER -->
-
 <!-- // CATEGORIES -->
-<div class="container padding-bottom-50">
+<div class="container padding-bottom-50" style="background: #fff;padding: 10px">
     <div class="container">
         <div class="row">
-
+            <br>
+            <h3>Gallery</h3>
+            <br>
             <? foreach ($photos as $photo):?>
             <div class="col-md-3 col-sm-3 margin-bottom-30">
                 <div class="product-cat">
